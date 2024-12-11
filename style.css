@@ -1,0 +1,484 @@
+/* Reset de base */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #FFFFFF;
+    color: #000;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: none; /* Suppression de la ligne d'ombrage */
+}
+
+header .logo img {
+    width: 120px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    font-size: 16px; /* Taille des textes du menu */
+    padding-top: 2px; /* Espacement pour la ligne au-dessus */
+    position: relative;
+    transition: color 0.3s ease, border-top 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #0065FC;
+}
+
+header nav ul li a:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Ligne bleue au-dessus des mots */
+    background-color: #0065FC;
+}
+
+/* Titre */
+.headline h2 {
+  font-family: Arial, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Paragraphe sous le titre */
+.headline p {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #000;
+  margin: 0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Barre de recherche */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.search-input {
+  width: 400px;
+  height: 50px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  padding: 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+}
+
+.search-button {
+  background-color: #0065FC;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 30px;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #004bbd;
+}
+/* *** Informations supplémentaires *** */
+.info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #606060; /* Texte gris clair */
+}
+
+.info i {
+    background-color: #0065FC; /* Fond bleu */
+    color: #FFF; /* Texte blanc */
+    border: 1px solid #D9D9D9; /* Contour gris clair */
+    border-radius: 50%; /* Cercle parfait */
+    width: 24px; /* Taille de l'icône */
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px; /* Taille du texte "i" */
+}
+
+/* *** Filtres *** */
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 25px;
+    background-color: #FFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.filter:hover {
+    background-color: #DEEBFF; /* Fond bleu clair au survol */
+    border-color: #B0B0B0; /* Bordure grise au survol */
+}
+
+.filter i {
+    color: #0065FC; /* Couleur bleue des icônes */
+}
+
+/* Icône spécifique pour "Économique" */
+.filter.economique i::before {
+    content: '\f3d1'; /* Unicode Font Awesome pour les billets */
+    font-family: 'Font Awesome 5 Free'; /* Utilise Font Awesome */
+    font-weight: 900;
+}
+
+/* Icône spécifique pour "Nos pépites" */
+.filter.nos-pepites i::before {
+    content: '\f06d'; /* Unicode Font Awesome pour les flammes */
+    font-family: 'Font Awesome 5 Free'; /* Utilise Font Awesome */
+    font-weight: 900;
+}
+
+/* Style pour le bouton actif */
+.filter.active {
+    background-color: #E8F0FF; /* Fond bleu clair */
+    border-color: #0065FC; /* Bordure bleue */
+    color: #0065FC; /* Texte bleu */
+}
+
+/* *** CONTAINER PRINCIPAL *** */
+.main-container {
+    display: flex; /* Affiche les sections côte à côte */
+    gap: 40px; /* Espacement entre les deux sections */
+    max-width: 1200px; /* Largeur totale de la page */
+    margin: 50px auto; /* Centre horizontalement avec marge en haut/bas */
+}
+
+/* Styles pour la section Hébergements */
+.accommodations {
+    /* Couleur de fond et dimensions */
+    background: #F2F2F2; /* Couleur gris clair */
+    width: 817px; /* Largeur précise */
+    height: 614px; /* Hauteur fixe comme demandé */
+
+    /* Bordures arrondies sur tous les côtés */
+    border-radius: 15px;
+
+    /* Espacement intérieur */
+    padding: 30px;
+
+    /* Positionnement des éléments */
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espace entre le titre et les cartes */
+}
+
+/* Titre "Hébergements à Marseille" */
+.accommodations h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25.83px;
+    margin: 0; /* Supprime les marges indésirables */
+    text-align: left;
+}
+
+/* Conteneur des cartes */
+.cards {
+    width: 100%; /* Prend toute la largeur disponible */
+    display: grid; /* Grille pour organiser les cartes */
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 30px; /* Espace entre les cartes */
+}
+
+/* Styles pour chaque carte */
+.card {
+    background: #FFFFFF;
+    border-radius: 20px; /* Bordures arrondies */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    overflow: hidden; /* Empêche les débordements des images */
+    display: flex;
+    flex-direction: column;
+    height: 207.25px; /* Hauteur exacte des cartes */
+}
+
+/* Image dans chaque carte */
+.card img {
+    width: 100%; /* Image remplit la largeur de la carte */
+    height: 124px; /* Hauteur précise de l'image */
+    object-fit: cover; /* L'image s'adapte parfaitement au conteneur */
+}
+
+/* Titre de l'hébergement dans la carte */
+.card h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.78px;
+    margin: 10px 15px 5px; /* Espacement autour du titre */
+    text-align: left;
+}
+
+/* Texte sous le titre */
+.card p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.44px;
+    margin: 0 15px 10px; /* Espacement autour du texte */
+    text-align: left;
+}
+
+/* Conteneur des étoiles */
+.stars {
+    display: flex;
+    gap: 4px; /* Espace entre les étoiles */
+    margin-left: 15px; /* Aligné avec le texte */
+    color: #0065FC; /* Couleur des étoiles */
+}
+/* les plus populaire  */
+.popular {
+    background: #F2F2F2;
+    width: 429px;
+    height: 614px;
+    border-radius: 15px;
+    padding: 30px 30px 30px 30px; /* Espacement interne autour du contenu */
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espacement entre les éléments */
+}
+
+/* Titre "Les plus populaires" */
+.popular h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25.83px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between; /* Place le texte et l'icône à chaque extrémité */
+    align-items: center; /* Centre verticalement */
+    margin: 0;
+}
+
+/* Conteneur des éléments */
+.popular ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espacement entre chaque carte */
+    padding: 0;
+    list-style: none; /* Supprime les puces des listes */
+}
+
+/* Styles pour chaque carte */
+.popular ul li {
+    display: flex; /* Disposition horizontale pour l'image et le contenu */
+    width: 369px; /* Largeur fixe */
+    height: 146px; /* Hauteur fixe */
+    gap: 0px; /* Pas d'espacement interne */
+    border-radius: 20px; /* Coins arrondis uniquement en haut à gauche */
+   background: #FFFFFF; /* Couleur de fond blanche */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    opacity: 1; /* Transparence (ajustez selon vos besoins) */
+    overflow: hidden; /* Empêche tout débordement visible */
+    box-sizing: border-box; /* Inclut les bordures et padding dans les dimensions */
+}
+/* Image de la carte */
+.popular ul li img {
+    width: 123px; /* Largeur exacte */
+    height: 146px; /* Hauteur exacte */
+    border-radius: 20px 0px 0px 20px; /* Coins arrondis uniquement à gauche */
+    border-width: 5px 0px 5px 5px; /* Bordure spécifique */
+    border-style: solid; /* Style de la bordure */
+    border-color: #FFFFFF; /* Couleur de la bordure blanche */
+    object-fit: cover; /* L'image remplit le conteneur sans déformation */
+    display: block; /* Supprime tout espace autour de l'image */
+    box-sizing: border-box; /* Inclut la bordure dans les dimensions */
+}
+
+/* Conteneur texte de la carte */
+.popular ul li div {
+    width: 246px; /* Largeur fixe pour le conteneur texte */
+    height: 136px; /* Hauteur fixe */
+    position: absolute; /* Positionnement par rapport à la carte */
+    top: 5px; /* Alignement vertical */
+    left: 123px; /* Alignement horizontal après l'image */
+    padding: 10px 15px 5px 15px; /* Espacement interne */
+    gap: 24px; /* Espacement entre les éléments (titre, texte, étoiles) */
+    opacity: 1; /* Rendre visible */
+    display:inline-flex;
+    flex-direction: column; /* Organisation verticale */
+    justify-content: flex-start; /* Les éléments restent alignés en haut */
+    box-sizing: border-box; /* Inclut le padding dans les dimensions */
+}
+
+/* Conteneur texte de la carte */
+.popular ul li div {
+    width: 246px; /* Largeur fixe pour le conteneur texte */
+    height: 136px; /* Hauteur fixe */
+    position: absolute; /* Positionnement par rapport à la carte */
+    top: 5px; /* Alignement vertical */
+    left: 123px; /* Alignement horizontal après l'image */
+    padding: 10px 15px 5px 15px; /* Espacement interne */
+    gap: 10px; /* Espacement entre les éléments (prix, titre, étoiles) */
+    opacity: 1; /* Rendre visible */
+    display: flex;
+    flex-direction: column; /* Organisation verticale */
+    align-items: flex-start; /* Alignement des éléments à gauche */
+    box-sizing: border-box; /* Inclut le padding dans les dimensions */
+}
+
+/* Titre de la carte */
+.popular ul li h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px; /* Taille de police */
+    font-weight: 700; /* Gras */
+    line-height: 18.78px; /* Hauteur de ligne */
+    text-align: left; /* Alignement à gauche */
+    margin: 0; /* Pas d'espace supplémentaire */
+    width: 226px;
+    height: auto; /* Hauteur ajustable */
+}
+
+
+
+
+
+/* *** SECTION ACTIVITÉS À MARSEILLE *** */
+.activities-section {
+    width: 1280px; /* Largeur totale */
+    margin: 50px auto; /* Centre la section horizontalement */
+    display: flex;
+    flex-direction: column; /* Aligne le titre et les cartes en colonne */
+    gap: 30px; /* Espacement entre le titre et les cartes */
+}
+
+.activities-section h2 {
+    font-size: 22px /* Taille du titre */
+    font-weight: bold; /* Poids du texte pour qu'il soit plus épais */
+    text-align: left; /* Aligne le texte à gauche */
+    margin: 0; /* Supprime les marges par défaut */
+    margin-top: 20px; /* Ajoute un petit espacement en haut */
+    padding-left: 30px; /* Ajoute un espace à gauche pour le démarquer */
+}
+
+/* Conteneur des cartes */
+.activities {
+    display: flex; /* Affiche les cartes sur une seule ligne */
+    justify-content: space-between; /* Répartit les cartes avec un espacement égal */
+    gap: 30px; /* Espacement entre les cartes */
+}
+
+/* Style des cartes */
+.activity-card {
+    width: 297.5px; /* Largeur fixe */
+    height: 437px; /* Hauteur fixe */
+    border-radius: 20px; /* Coins arrondis */
+    overflow: hidden; /* Cache les débordements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    background-color: #FFF; /* Fond blanc */
+    display: flex;
+    flex-direction: column; /* Aligne l'image et le texte verticalement */
+}
+
+/* Image dans la carte */
+.activity-card img {
+    width: 297.5px; /* Largeur fixe de l'image */
+    height: 380px; /* Hauteur fixe de l'image */
+    object-fit: cover; /* Adapte l'image sans déformation */
+    border-top-left-radius: 20px; /* Coins arrondis en haut à gauche */
+    border-top-right-radius: 20px; /* Coins arrondis en haut à droite */
+}
+
+/* Texte en dessous de l'image */
+.activity-card .card-text {
+    width: 100%; /* Prend toute la largeur */
+    height: auto; /* Ajuste la hauteur automatiquement */
+    padding: 20px 19px; /* Espacement interne */
+    background-color: #FFF; /* Fond blanc */
+    border-bottom-left-radius: 20px; /* Coins arrondis en bas à gauche */
+    border-bottom-right-radius: 20px; /* Coins arrondis en bas à droite */
+    display: flex;
+    align-items: center; /* Aligne le texte verticalement au centre */
+    justify-content: left; /* Aligne le texte à gauche */
+    font-size: 16px; /* Taille du texte */
+    font-weight: bold;
+    color: #000; /* Couleur noire pour le texte */
+}
+
+
+/* *** Footer Global *** */
+.footer {
+    width: 1340px; /* Largeur totale */
+    height: auto; /* Hauteur ajustable */
+    background-color: #F2F2F2; /* Fond gris clair */
+    margin: 0 auto; /* Centre le footer */
+    padding: 20px 0; /* Espacement interne en haut et en bas */
+    display: flex; /* Dispose les sections en ligne */
+    justify-content: space-between; /* Espacement uniforme entre les sections */
+    gap: 0px; /* Pas d'écart supplémentaire entre les sections */
+}
+
+/* *** Section individuelle dans le footer *** */
+.footer-section {
+    width: 446.67px; /* Largeur des colonnes */
+    padding: 20px 20px 0 20px; /* Ajoute du padding à gauche et à droite */
+    gap: 15px; /* Espacement entre les éléments internes */
+}
+
+/* *** Titres des sections *** */
+.footer-section h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px; /* Taille de la police */
+    font-weight: 700; /* Texte en gras */
+    line-height: 21.13px; /* Hauteur de ligne */
+    text-align: left; /* Aligne le texte à gauche */
+    margin-bottom: 15px; /* Espacement avec le contenu en dessous */
+}
+
+/* *** Liens de chaque section *** */
+.footer-section ul {
+    list-style: none; /* Supprime les puces des listes */
+    padding: 0; /* Supprime les marges internes */
+    margin: 0; /* Supprime les marges externes */
+}
+
+.footer-section ul li {
+    margin-bottom: 15px; /* Espacement entre chaque lien */
+}
+
+.footer-section ul li a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px; /* Taille de la police */
+    font-weight: 400; /* Texte normal */
+    line-height: 18.78px; /* Hauteur de ligne */
+    text-align: left; /* Aligne le texte à gauche */
+    text-decoration: none; /* Supprime le soulignement */
+    color: #000; /* Texte noir */
+ }
+
