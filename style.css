@@ -51,44 +51,34 @@ header nav ul li a:hover::before {
     background-color: #0065FC;
 }
 
-/* Titre */
+/* Titre principal */
 .headline h2 {
-  font-family: Arial, sans-serif;
-  font-size: 32px;
-  font-weight: bold;
-  color: #000;
-  margin: 0;
-  text-align: center;
-  margin-top: 40px;
+  width: 1340px;
+  height: 26px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 25.83px;
+  padding-left: 100px; /* Décalage de 100px vers la droite */
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin: 26px 0 0 0; /* Décalage vers le bas de 26px */
 }
 
 /* Paragraphe sous le titre */
 .headline p {
-  font-family: Arial, sans-serif;
-  font-size: 18px;
-  color: #000;
-  margin: 0;
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* Barre de recherche */
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.search-input {
-  width: 400px;
-  height: 50px;
-  font-family: Arial, sans-serif;
+  width: 1340px;
+  height: 19px;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
   padding: 0 20px;
-  border: 1px solid #ccc;
+  padding-left: 100px; /* Décalage de 100px vers la droite */
   border-radius: 25px 0 0 25px;
   outline: none;
+  margin-top: 7px; /* Décalage vers le bas de 7px */
 }
+
 
 .search-button {
   background-color: #0065FC;
@@ -97,6 +87,7 @@ header nav ul li a:hover::before {
   font-size: 16px;
   font-weight: bold;
   padding: 0 30px;
+  padding-left: 100px; /* Décalage de 100px vers la droite */
   border: none;
   border-radius: 0 25px 25px 0;
   cursor: pointer;
@@ -105,19 +96,91 @@ header nav ul li a:hover::before {
 .search-button:hover {
   background-color: #004bbd;
 }
-/* *** Informations supplémentaires *** */
+
+/* *** Filtres *** */
+
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espace entre les éléments */
+    width: 1340px; /* Largeur ajustée */
+    height: 50px; /* Hauteur fixe */
+    opacity: 1; /* Assure que le conteneur est visible */
+    padding-left: 100px; /* Décalage de 100px vers la droite */
+}
+
+/* Style du texte "Filtres" */
+.filter-label {
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.13px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000; /* Couleur noire par défaut */
+}
+
+/* Style des boutons de filtre */
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espace entre l'icône et le texte */
+    padding: 4px 19px; /* Espacement interne */
+    border: 2px solid #D9D9D9; /* Bordure grise */
+    border-radius: 25px; /* Arrondi personnalisé */
+    background-color: #FFF; /* Fond blanc */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Texte des boutons */
+.filter span {
+    font-family: Raleway, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 19.96px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000; /* Couleur noire par défaut */
+}
+
+/* Icônes des boutons */
+.filter i {
+    color: #007AFF; /* Couleur bleue des icônes */
+    font-size: 16px; /* Taille des icônes */
+}
+
+/* État actif (bouton sélectionné) */
+.filter.active {
+    background-color: #E8F0FF; /* Fond bleu clair */
+    border-color: #0065FC; /* Bordure bleue */
+    color: #0065FC; /* Texte bleu */
+}
+
+/* État au survol */
+.filter:hover {
+    background-color: #F3F9FF; /* Fond bleu clair */
+    border-color: #B0B0B0; /* Bordure grise */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Accentuation de l'ombre */
+}
+
+/* Informations supplémentaires */
 .info {
     display: flex;
     align-items: center;
     gap: 10px;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
-    color: #606060; /* Texte gris clair */
+    color: black; /* Texte noir */
+   padding-left: 100px; /* Décalage de 100px vers la droite */
 }
 
 .info i {
     background-color: #0065FC; /* Fond bleu */
-    color: #FFF; /* Texte blanc */
+    color: white;
     border: 1px solid #D9D9D9; /* Contour gris clair */
     border-radius: 50%; /* Cercle parfait */
     width: 24px; /* Taille de l'icône */
@@ -126,50 +189,9 @@ header nav ul li a:hover::before {
     align-items: center;
     justify-content: center;
     font-size: 14px; /* Taille du texte "i" */
+   
 }
 
-/* *** Filtres *** */
-.filter {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    border: 1px solid #E0E0E0;
-    border-radius: 25px;
-    background-color: #FFF;
-    cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.filter:hover {
-    background-color: #DEEBFF; /* Fond bleu clair au survol */
-    border-color: #B0B0B0; /* Bordure grise au survol */
-}
-
-.filter i {
-    color: #0065FC; /* Couleur bleue des icônes */
-}
-
-/* Icône spécifique pour "Économique" */
-.filter.economique i::before {
-    content: '\f3d1'; /* Unicode Font Awesome pour les billets */
-    font-family: 'Font Awesome 5 Free'; /* Utilise Font Awesome */
-    font-weight: 900;
-}
-
-/* Icône spécifique pour "Nos pépites" */
-.filter.nos-pepites i::before {
-    content: '\f06d'; /* Unicode Font Awesome pour les flammes */
-    font-family: 'Font Awesome 5 Free'; /* Utilise Font Awesome */
-    font-weight: 900;
-}
-
-/* Style pour le bouton actif */
-.filter.active {
-    background-color: #E8F0FF; /* Fond bleu clair */
-    border-color: #0065FC; /* Bordure bleue */
-    color: #0065FC; /* Texte bleu */
-}
 
 /* *** CONTAINER PRINCIPAL *** */
 .main-container {
@@ -332,8 +354,6 @@ header nav ul li a:hover::before {
     gap: 24px; /* Espacement entre les éléments (titre, texte, étoiles) */
     opacity: 1; /* Rendre visible */
     display:inline-flex;
-    flex-direction: column; /* Organisation verticale */
-    justify-content: flex-start; /* Les éléments restent alignés en haut */
     box-sizing: border-box; /* Inclut le padding dans les dimensions */
 }
 
@@ -342,13 +362,11 @@ header nav ul li a:hover::before {
     width: 246px; /* Largeur fixe pour le conteneur texte */
     height: 136px; /* Hauteur fixe */
     position: absolute; /* Positionnement par rapport à la carte */
-    top: 5px; /* Alignement vertical */
     left: 123px; /* Alignement horizontal après l'image */
     padding: 10px 15px 5px 15px; /* Espacement interne */
     gap: 10px; /* Espacement entre les éléments (prix, titre, étoiles) */
     opacity: 1; /* Rendre visible */
     display: flex;
-    flex-direction: column; /* Organisation verticale */
     align-items: flex-start; /* Alignement des éléments à gauche */
     box-sizing: border-box; /* Inclut le padding dans les dimensions */
 }
@@ -365,10 +383,6 @@ header nav ul li a:hover::before {
     height: auto; /* Hauteur ajustable */
 }
 
-
-
-
-
 /* *** SECTION ACTIVITÉS À MARSEILLE *** */
 .activities-section {
     width: 1280px; /* Largeur totale */
@@ -380,7 +394,7 @@ header nav ul li a:hover::before {
 
 .activities-section h2 {
     font-size: 22px /* Taille du titre */
-    font-weight: bold; /* Poids du texte pour qu'il soit plus épais */
+    font-weight : bold; /* Poids du texte pour qu'il soit plus épais */
     text-align: left; /* Aligne le texte à gauche */
     margin: 0; /* Supprime les marges par défaut */
     margin-top: 20px; /* Ajoute un petit espacement en haut */
@@ -481,4 +495,3 @@ header nav ul li a:hover::before {
     text-decoration: none; /* Supprime le soulignement */
     color: #000; /* Texte noir */
  }
-
