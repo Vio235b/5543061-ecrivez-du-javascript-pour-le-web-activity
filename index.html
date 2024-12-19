@@ -15,7 +15,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
     <!-- Lien vers le CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- Début du Header -->
@@ -41,14 +41,15 @@
         <p>En plein centre-ville ou en pleine nature</p>
     </div>
 
-    <!-- Barre de recherche -->
-    <div class="search-bar">
-        <div class="location-input">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Marseille, France</span>
-        </div>
-        <button class="search-button">Rechercher</button>
+ <!-- Barre de recherche -->
+<div class="search-bar">
+    <div class="location-input">
+        <i class="fas fa-map-marker-alt"></i>
+        <input type="text" class="location-text" value="Marseille, France" readonly>
     </div>
+    <button class="search-button">Rechercher</button>
+</div>
+
 
     <!-- Filtres -->
     <div class="filters">
@@ -61,7 +62,7 @@
 
     <!-- Informations supplémentaires -->
     <div class="info">
-        <i class="fas fa-info-circle"></i>
+        <i class="fas fa-info"></i>
         Plus de 500 logements sont disponibles dans cette ville
     </div>
 </div>
@@ -79,7 +80,7 @@
                 <div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
             </div>
             <div class="card">
@@ -99,7 +100,7 @@
                 <div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
             </div>
             <div class="card">
@@ -109,7 +110,7 @@
                 <div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
             </div>
             <div class="card">
@@ -119,7 +120,7 @@
                 <div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
             </div>
             <div class="card">
@@ -129,7 +130,7 @@
                 <div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
             </div>
         </div>
@@ -137,44 +138,51 @@
     </section>
     <!-- Fin de la section Hébergements -->
 
-   <!-- Début de la section Les plus populaires -->
-    <section class="popular">
-        <h2>Les plus populaires</h2>
-        <ul>
-            <li>
-                <img src="https://i.postimg.cc/jjPpg7c2/emile-guillemot.jpg" alt="Hôtel Le soleil du matin">
+  <!-- Début de la section Les plus populaires -->
+<section class="popular">
+    <h2>Les plus populaires</h2>
+    <i class="fa fa-chart-line"></i>
+    <ul>
+        <li>
+            <img src="https://i.postimg.cc/jjPpg7c2/emile-guillemot.jpg" alt="Hôtel Le soleil du matin">
+            <div class="card-content">
                 <h3>Hôtel Le soleil du matin</h3>
                 <p>Nuit à partir de 25€</p>
                 <div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
-            </li>
-            <li>
-                <img src="https://i.postimg.cc/ryrtqmHC/aw-creative.jpg" alt="Chambres d'hôtes Au cœur de l'eau">
+            </div>
+        </li>
+        <li>
+            <img src="https://i.postimg.cc/ryrtqmHC/aw-creative.jpg" alt="Chambres d'hôtes Au cœur de l'eau">
+            <div class="card-content">
                 <h3>Chambres d'hôtes Au cœur de l'eau</h3>
                 <p>Nuit à partir de 71€</p>
                 <div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
-            </li>
-            <li>
-                <img src="https://i.postimg.cc/VsnFJF6d/febrian-zakaria2.jpg" alt="Hôtel Bleu et Blanc">
+            </div>
+        </li>
+        <li>
+            <img src="https://i.postimg.cc/VsnFJF6d/febrian-zakaria2.jpg" alt="Hôtel Bleu et Blanc">
+            <div class="card-content">
                 <h3>Hôtel Bleu et Blanc</h3>
                 <p>Nuit à partir de 68€</p>
                 <div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
-            </li>
-        </ul>
-    </section>
-  </div class="main-container">
-    <!-- Fin de la section Les plus populaires -->
+            </div>
+        </li>
+    </ul>
+</section>
+<!-- Fin de la section Les plus populaires -->
+</div class="main-container">
  
 
     <!-- Titre principal de la section -->
