@@ -19,7 +19,7 @@
 </head>
 <body>
     <!-- Début du Header -->
-    <header>
+    <header class="container">
         <!-- Logo -->
         <div class="logo">
             <img src="https://i.postimg.cc/dtT18xF2/Booki.png" alt="Logo Booki">
@@ -34,7 +34,7 @@
     </header>
     <!-- Fin du Header -->
 
-   <div class="search-section">
+   <div class="search-section container">
     <!-- Texte principal -->
     <div class="headline">
         <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
@@ -42,17 +42,23 @@
     </div>
 
  <!-- Barre de recherche -->
-<div class="search-bar">
+  <div class="search-bar container">
     <div class="location-input">
-        <i class="fas fa-map-marker-alt"></i>
-        <input type="text" class="location-text" value="Marseille, France" readonly>
+        <div class="icon-container">
+        <i class="fa-solid fa-location-dot"></i>
+        </div>
+       <input type="text" class="location-text" value="Marseille, France"
+       readonly style=" 
+       width: 100%;
+       height: 49px;
+       "> 
     </div>
     <button class="search-button">Rechercher</button>
 </div>
 
 
     <!-- Filtres -->
-    <div class="filters">
+    <div class="filters container">
         <span class="filter-label">Filtres</span>
         <div class="filter"><i class="fas fa-money-bill-alt"></i> Économique</div>
         <div class="filter"><i class="fas fa-person"></i> Familial</div>
@@ -61,13 +67,12 @@
     </div>
 
     <!-- Informations supplémentaires -->
-    <div class="info">
+    <div class="info container">
         <i class="fas fa-info"></i>
         Plus de 500 logements sont disponibles dans cette ville
     </div>
-</div>
 
-<div class="main-container">
+<div class="main-container container">
     <!-- Début de la section Hébergements -->
     <section class="accommodations">
         <h2>Hébergements à Marseille</h2>
@@ -94,9 +99,9 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://i.postimg.cc/jjtDX4qM/annie-spratt.jpg" alt="Hôtel de la Mer">
-                <h3>Hôtel de la Mer</h3>
-                <p>Nuit à partir de 46€</p>
+                <img src="https://i.postimg.cc/hjrZ7b4F/reisetopia.jpg" alt="Hôtel Les Mouettes">
+                <h3>Hôtel Les Mouettes</h3>
+                <p>Nuit à partir de 76€</p>
                 <div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -104,9 +109,9 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://i.postimg.cc/hjrZ7b4F/reisetopia.jpg" alt="Hôtel Les Mouettes">
-                <h3>Hôtel Les Mouettes</h3>
-                <p>Nuit à partir de 76€</p>
+                <img src="https://i.postimg.cc/jjtDX4qM/annie-spratt.jpg" alt="Hôtel de la Mer">
+                <h3>Hôtel de la Mer</h3>
+                <p>Nuit à partir de 46€</p>
                 <div class="stars">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -139,16 +144,18 @@
     <!-- Fin de la section Hébergements -->
 
   <!-- Début de la section Les plus populaires -->
-<section class="popular">
+<section class="popular container">
     <h2>Les plus populaires</h2>
+    <div class="popular-header">
     <i class="fa fa-chart-line"></i>
+    </div>
     <ul>
         <li>
             <img src="https://i.postimg.cc/jjPpg7c2/emile-guillemot.jpg" alt="Hôtel Le soleil du matin">
             <div class="card-content">
                 <h3>Hôtel Le soleil du matin</h3>
                 <p>Nuit à partir de 25€</p>
-                <div class="stars">
+                <div class="star">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -160,9 +167,9 @@
             <div class="card-content">
                 <h3>Chambres d'hôtes Au cœur de l'eau</h3>
                 <p>Nuit à partir de 71€</p>
-                <div class="stars">
+                <div class="starss">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
             </div>
@@ -172,7 +179,7 @@
             <div class="card-content">
                 <h3>Hôtel Bleu et Blanc</h3>
                 <p>Nuit à partir de 68€</p>
-                <div class="stars">
+                <div class="star">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -182,11 +189,11 @@
     </ul>
 </section>
 <!-- Fin de la section Les plus populaires -->
-</div class="main-container">
+ </div>
  
 
     <!-- Titre principal de la section -->
-    <section class="activities-section"> 
+    <section class="activities-section container"> 
       <h2>Activités à Marseille</h2> 
       <div class="activities"> 
       <!-- Carte 1 --> 
@@ -211,7 +218,7 @@
       </div> 
   </section>
 
-   <footer class="footer">
+   <footer class="footer container">
     <!-- Section "À propos" -->
     <div class="footer-section">
         <h3>À propos</h3>

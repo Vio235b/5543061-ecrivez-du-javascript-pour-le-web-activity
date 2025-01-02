@@ -6,12 +6,16 @@ body {
     color: #000;
 }
 
+.container{
+    max-width: 1440px;
+    margin: auto;
+}
+
 /* Header */
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
+    align-items: flex-start;
     border-bottom: none; /* Suppression de la ligne d'ombrage */
 }
 
@@ -22,9 +26,8 @@ header .logo img {
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+    gap: 65px;
+    margin: -15px;
 }
 
 header nav ul li a {
@@ -32,9 +35,11 @@ header nav ul li a {
     color: #000;
     font-weight: 400;
     font-size: 16px; /* Taille des textes du menu */
+    padding: 0px;
     padding-top: 2px; /* Espacement pour la ligne au-dessus */
     position: relative;
     transition: color 0.3s ease, border-top 0.3s ease;
+    text-align:flex-start;
 }
 
 header nav ul li a:hover {
@@ -59,11 +64,11 @@ header nav ul li a:hover::before {
   font-size: 22px;
   font-weight: 700;
   line-height: 25.83px;
-  padding-left: 100px; /* Décalage de 100px vers la droite */
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  margin: 26px 0 0 0; /* Décalage vers le bas de 26px */
+  margin: 0; /* Suppression de marge par défaut */
+  margin-bottom: 8px; /* Distance de 8px entre le h2 et le paragraphe */
 }
 
 /* Paragraphe sous le titre */
@@ -73,88 +78,75 @@ header nav ul li a:hover::before {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   padding: 0 20px;
-  padding-left: 100px; /* Décalage de 100px vers la droite */
   border-radius: 25px 0 0 25px;
   outline: none;
-  margin-top: 7px; /* Décalage vers le bas de 7px */
+  margin: 0; /* Suppression des marges par défaut */
+  margin-bottom: 24px; /* Distance de 24px entre le paragraphe et le bouton */
 }
 
 .search-bar {
     display: flex;
+    width: 377px;
+    height: 49px;
+    border-radius: 15px;
+    border: 1px solid #F2F2F2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+    gap: 10px;
+}
+
+.icon-container {
+    background-color: #F2F2F2; /* Couleur de fond gris */
+    display: flex;
     align-items: center;
-    background-color: #f2f2f2;
-    width: 377px; /* Largeur fixe pour correspondre au design */
-    height: 49px; /* Hauteur fixe */
-    border-radius: 15px; /* Coins arrondis */
-    border: 1px solid #ccc; /* Bordure */
-    margin-left: 100px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
-    overflow: hidden; /* Assure que les coins arrondis s'appliquent à tout le contenu */
+    padding: 0 10px; /* Espacement autour de l'icône */
+    border-radius: 15px 0 0 15px; /* Coins arrondis pour le côté gauche */
+    height: 49px;
+    margin-left: -10px;
 }
 
 .location-input {
     display: flex;
     align-items: center;
-    position: relative; /* Nécessaire pour positionner la ligne */
-    justify-content: flex-start; /* Alignement du texte et de l'icône à gauche */
-    flex-grow: 1; /* Occupe tout l'espace restant */
-    padding: 0 15px; /* Ajout d'espacement interne */
-    background-color: #fff; /* Fond blanc */
-    font-size: 14px; /* Taille de la police */
-    color: #333; /* Couleur du texte */
+    flex-grow: 1;
+    padding: 0 10px;
 }
 
+.location-input input {
+    border-left: 1px solid #F2F2F2;
+    border-right: 0;
+    border-radius: 10px; /* Coins arrondis */
+    padding: 10px; /* Espacement interne */
+    font-family: Raleway, sans-serif; /* Police Raleway */
+    font-size: 18px; /* Taille du texte */
+    font-weight: 700; /* Texte en gras */
+    line-height: 21.13px; 
+    text-align: center; 
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none; 
+    background-color: white; /* Fond blanc */
+    color: #000; /* Couleur noire pour le texte */
+    outline: none; 
+}
 .location-input i {
-    color: #000; /* Couleur de l'icône noire */
-    margin-right: 8px; /* Espacement entre l'icône et le texte */
-}
-
-.location-input::after {
-    content: '';
-    position: absolute;
-    left: 50px; /* Position horizontale de la ligne */
-    top: 0; /* Commence en haut */
-    height: 49px; /* Hauteur de la ligne */
-    width: 1px; /* Largeur de la ligne */
-    background-color: #ccc; /* Couleur de la ligne */
-}
-
-span {
-  background-color: white;
-  font-family: Raleway;
-  font-size: 18px;
-  width: 147px;
-  height: 21px;
-  font-weight: 700;
-  line-height: 21px; /* Aligne le texte correctement avec la hauteur */
-  text-align: center; /* Centre le texte horizontalement */
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+    margin-right: 10px;
+    color: #000;
+    margin-left: 10px;
 }
 
 .search-button {
-    background-color: #0065FC; /* Fond bleu */
-    color: #fff; /* Texte blanc */
-    width: 132px; /* Largeur ajustée à Hug */
-    height: 49px; /* Hauteur fixe */
-    padding: 15px 16px; /* Espacement interne */
-    border-radius: 0px 15px 15px 0px; /* Coins arrondis uniquement à droite */
-    border-style: solid;
-    border-width: 1px 0px 0px 0px; /* Bordure uniquement en haut */
-    border-color: #ccc; /* Couleur de la bordure */
-    font-size: 18px; /* Taille du texte */
-    font-weight: 700; /* Poids de la police */
-    font-family: Raleway, sans-serif; /* Police Raleway */
-    line-height: 21.13px; /* Hauteur de ligne */
-    text-align: center; /* Centre horizontal du texte */
-    cursor: pointer; /* Curseur pointeur */
-    display: flex; /* Flexbox pour gestion du contenu */
-    align-items: center; /* Centre verticalement le texte */
-    justify-content: center; /* Centre horizontalement le texte */
-    gap: 10px; /* Espace entre les éléments internes */
-    opacity: 1; /* Opacité visible */
-    transition: background-color 0.3s ease; /* Transition sur le survol */
-}
+    background-color: #0065FC;
+    color: #fff;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    height: 49px;
+    padding: 0 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0;
+} 
 
 /* *** Filtres *** */
 .filters {
@@ -164,6 +156,9 @@ span {
     width: 758px; /* Largeur ajustée selon votre description */
     height: 50px; /* Hauteur fixe */
     opacity: 1; /* Assure que le conteneur est visible */
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 /* Style du texte "Filtres" */
@@ -176,7 +171,6 @@ span {
     text-underline-position: from-font; /* Position de soulignement respectant la police */
     text-decoration-skip-ink: none; /* Soulignement sans interruption pour l'encre */
     color: #000; /* Couleur noire */
-  margin-left:100px;
 }
 
 /* Style des boutons de filtre */
@@ -184,15 +178,19 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Espace entre l'icône et le texte */
-    padding: 4px 19px; /* Espacement interne */
-    border: 2px solid #D9D9D9; /* Bordure grise */
-    border-radius: 25px; /* Arrondi personnalisé */
+    gap: 12px; /* Espace entre l'icône et le texte */
+    padding: 8px 24px; /* Espacement interne augmenté pour des boutons plus grands */
+    border: 2px solid #D9D9D9; /* Bordure légèrement plus épaisse */
+    border-radius: 30px; /* Arrondi personnalisé légèrement augmenté */
     background-color: #FFF; /* Fond blanc */
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
     white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    font-size: 16px;
+    font-weight: 700;
 }
+
+
 /* Texte des boutons */
 .filter span {
     font-family: Raleway, sans-serif;
@@ -232,7 +230,6 @@ span {
     width: 1306px; /* Largeur du conteneur de texte */
     height: 19px; /* Hauteur du conteneur */
     opacity: 1; /* Rendre visible */
-    padding-left: 100px; /* Décalage vers la droite */
 }
 
 .info i {
@@ -254,21 +251,19 @@ span {
 .main-container {
     display: flex; /* Affiche les sections côte à côte */
     gap: 40px; /* Espacement entre les deux sections */
-    margin-left: 100px;
-    margin-top:40Px
+    margin-top:40Px;
 }
 
 
 /* Styles pour la section Hébergements */
 .accommodations {
-    /* Dimensions */
-    width: 1025px; /* Largeur ajustée */
-    height: 614px; /* Hauteur inchangée */
+    width: 871px; /* Largeur inchangée */
+    height: 580px; 
     padding: 30px 0 0 0; /* Espacement en haut uniquement */
-    gap: 30px;
-    border-radius: 15px;
+    gap: 30px; /* Espacement inchangé entre les éléments */
+    border-radius: 15px ; /* Arrondi uniquement sur le coin supérieur gauche */
     background: #F2F2F2; /* Couleur gris clair */
-  opacity: 1;
+    opacity: 1;
 }
 
 /* Titre "Hébergements à Marseille" */
@@ -290,12 +285,15 @@ span {
 .cards {
     width: 100%; /* Largeur maximale pour s'adapter au conteneur parent */
     display: grid; /* Utilise une grille pour l'organisation */
-    grid-template-columns: repeat(3, 250.33px); /* 3 colonnes de largeur fixe */
+    grid-template-columns: repeat(3, 220px); /* 3 colonnes légèrement plus petites */
     padding: 0 0 15px 0; /* Espacement uniquement en bas */
     border-radius: 20px 0 0 0; /* Arrondi uniquement sur le coin supérieur gauche */
+    align-items: center;
+    justify-content: center; /* Centre les cartes horizontalement */
     opacity: 1; 
-  gap:60px;
-  margin-left:40px;
+    gap: 50px; /* Réduction de l'espacement entre les cartes */
+    margin: 0 auto; /* Centrage du conteneur si nécessaire */
+    margin-top: 35px;
 }
 
 
@@ -308,92 +306,98 @@ span {
     display: flex;
     flex-direction: column;
     gap: 3px; /* Espacement entre les cartes */
-    height: 207.25px; /* Hauteur exacte des cartes */
-   
+    height: 180px; /* Hauteur légèrement réduite */
 }
 
+
+/* Image de la carte */
 .card img {
-    width: 250.33px;
-    height: 124px;
+    width: 225px; 
+    height: 112px; 
+    padding-right: 2%;
     object-fit: cover;
-    border-radius: 20px 20px 0 0;
-    border: 5px solid #FFFFFF;
-    box-sizing: border-box; /* Inclut la bordure dans la largeur/hauteur */
+    border-radius: 20px 20px 0 0 ; 
+    border: 5px solid #FFFFFF; /* Réduction de la bordure */
+    box-sizing: border-box;
     opacity: 1;
 }
-
-
 
 /* Titre de l'hébergement dans la carte */
 .card h3 {
     font-family: 'Raleway', sans-serif;
-    font-size: 16px;
+    font-size: 14.4px; 
     font-weight: 700;
-    line-height: 18.78px;
-    margin: 10px 15px 5px; /* Espacement autour du titre */
+    line-height: 16.9px; /* Proportionnel au changement de taille */
     text-align: left;
+    margin: 0 13.5px 7px; /* Marges ajustées */
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
 }
 
 /* Texte sous le titre */
 .card p {
     font-family: 'Raleway', sans-serif;
-    font-size: 14px;
+    font-size: 12.6px; 
     font-weight: 400;
-    line-height: 16.44px;
-    margin: 0 15px 10px; /* Espacement autour du texte */
+    line-height: 14.8px; /* Ajustement proportionnel */
     text-align: left;
+    margin: 0 13.5px 7px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
 }
 
 /* Conteneur des étoiles */
 .stars {
+    width: 72.9px; /* Réduction de 10% */
+    height: 11.93px; /* Ajustement proportionnel */
     display: flex;
-    gap: 2px; /* Espace précis entre les étoiles */
-    margin-left: 15px; /* Aligné avec le texte */
+    gap: 0px;
+    margin: 0 13.5px;
     position: relative;
+    transform: translateY(-3.6px); /* Ajusté pour correspondre à la nouvelle taille */
+    padding: 0px;
 }
 
 /* Couleur des étoiles remplies */
 .stars .fas {
-    color: #0065FC; /* Couleur des étoiles remplies */
-    font-size: 14.29px; /* Taille des étoiles remplies */
+    color: #0065FC;
+    font-size: 12.86px; /* Réduction de 10% */
 }
+
 /* Couleur et remplissage des étoiles vides */
 .stars i:last-child {
-    font-size: 14.29px; /* Taille des étoiles */
-    color: #F2F2F2; 
+    font-size: 12.86px; /* Taille réduite */
+    color: #F2F2F2;
 }
 
 /* Styles pour le bouton "Afficher plus" */
 button {
-    opacity: 1;
-    font-family: 'Raleway', sans-serif; /* Police définie */
-    font-size: 18px; /* Taille de police */
-    font-weight: 700; /* Texte en gras */
-    line-height: 21.13px; /* Hauteur de ligne */
-    text-align: left; /* Alignement du texte à gauche */
-    text-underline-position: from-font; /* Position du soulignement respectant la fonte */
-    text-decoration-skip-ink: none; /* Pas de saut d'encre pour les décorations */
-    /* Supprime le style natif du bouton */
+    font-family: 'Raleway', sans-serif;
+    font-size: 16.2px;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: left;
     background: none;
     border: none;
-    padding: 0;
-    cursor: pointer; /* Facultatif : Pointer sur hover pour montrer l'interactivité */
-    margin-left: 60px;
+    cursor: pointer;
+    padding: 0; /* Supprime les espaces internes */
+    margin-left: 54px; /* Alignement horizontal */
+    margin-top: 20px; 
 }
+
+
 
 /* Styles pour la section Populaire */
 .popular {
     width: 429px; /* Largeur fixe */
-    height: 614px; /* Hauteur fixe */
+    height: 580px; /* Hauteur fixe */
     padding: 30px 0 0 0; /* Espacement en haut uniquement */
     gap: 0px; /* Pas d'espacement */
-    border-radius: 20px; /* Coins arrondis en haut à gauche uniquement */
-    background: #F2F2F2; /* Couleur blanche */
-    opacity: 2; /* Opacité pleine */
-    texte-items: center;
+    border-radius: 20px; /* Coins arrondis */
+    background: #F2F2F2; 
+    opacity: 1; /* Opacité pleine */
+    position: relative; 
 }
-
-
 /* Titre "Les plus populaires" */
 .popular h2 {
     font-family: 'Raleway', sans-serif;
@@ -404,26 +408,50 @@ button {
     margin-left: 26px;
 }
 
+/* Icône augmentation */
+.popular-header i {
+    color: #0065FC; /* Couleur de l'icône */
+    font-size: 16px; /* Taille de l'icône */
+    width: 18px;
+    height: 15.75px;
+    position: absolute;
+    right: 30px; /* Distance par rapport au bord droit */
+    display: inline-block; /* Assure une bonne mise en page */
+    margin-top: -40px;
+}
+
 /* Conteneur des cartes */
 .popular ul {
     display: flex; /* Active le mode flexbox */
     flex-direction: column; /* Place les cartes en colonne */
     gap: 30px; /* Espacement entre chaque carte */
     padding: 0;
-    list-style: none; /* Supprime les puces des listes */
+    list-style: none; 
+    align-items: center;
+    margin: 20px 0; /* Espacement vertical des cartes */
 }
 
 /* Styles pour chaque carte */
 .popular ul li {
-    display: flex; /* Disposition horizontale pour l'image et le contenu */
-    width: 369px; /* Largeur fixe */
-    height: auto; /* Hauteur ajustable pour s'adapter au contenu */
-    gap: 15px; /* Espacement entre l'image et le contenu texte */
-    border-radius: 20px; /* Coins arrondis */
-    background: #FFFFFF; /* Couleur de fond blanche */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile */
-    overflow: hidden; /* Empêche tout débordement visible */
-    box-sizing: border-box; /* Inclut les bordures et padding dans les dimensions */
+    display: flex;
+    width: 369px;
+    gap: 0; 
+    border-radius: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Conteneur du texte et des étoiles */
+.popular ul li .card-content {
+    display: flex;
+    flex-direction: column; /* Organise verticalement */
+    justify-content: flex-start; /* Aligne le contenu en haut */
+    gap: 8px; /* Réduit l'espacement vertical entre titre, texte et étoiles */
+    padding: 10px 10px 0 10px; /* Réduit l'espacement autour du texte */
+    box-sizing: border-box;
+    width: 226px; /* Largeur précise */
 }
 
 /* Image de la carte */
@@ -437,66 +465,114 @@ button {
     object-fit: cover; /* L'image remplit le conteneur sans déformation */
     display: block; /* Supprime tout espace autour de l'image */
     box-sizing: border-box; /* Inclut la bordure dans les dimensions */
+
+    /* Bordure */
+    border-width: 5px 0px 5px 5px; /* Haut, droite, bas, gauche */
+    border-style: solid; /* Style de bordure solide */
+    border-color: #FFFFFF; /* Couleur de la bordure */
 }
 
-/* Conteneur texte de la carte */
-.popular ul li div {
-    display: flex; /* Active Flexbox */
-    flex-direction: column; /* Aligne les éléments verticalement */
-    align-items: flex-start; /* Aligne à gauche */
-    gap: 5px; /* Espacement entre le titre, le texte et les étoiles */
-    padding: 10px 0; /* Ajoute de l'espace autour du texte */
-    box-sizing: border-box;
+/* Forcer la dernière image à avoir les mêmes dimensions */
+.popular ul li img:last-child {
+    width: 246px;
+    height: 146px;
+    border-radius: 20px 0px 0px 20px;
+    object-fit: cover;
 }
 
 /* Titre de la carte */
 .popular ul li h3 {
-    margin: 0; /* Supprime les marges */
-    font-size: 16px; /* Taille de police */
-    font-weight: 700; /* Gras */
-    line-height: 20px; /* Hauteur de ligne */
-    color: #000; /* Couleur noire */
-    text-align: left; /* Alignement à gauche */
-    width: 100%; /* Permet au titre de prendre toute la largeur */
-    word-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
+    margin: 0; /* Supprime les marges par défaut */
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.78px;
+    text-align: left;
+    width: 226px;
+    height: auto; /* Supprime la hauteur fixe */
+    word-wrap: break-word;
+    margin-bottom: 5px; /* Espacement de 5px sous le titre */
 }
 
 /* Texte sous le titre */
 .popular ul li p {
-    margin: 0; /* Supprime les marges */
-    font-size: 14px; /* Taille du texte */
-    color: #333; /* Couleur grise */
-    line-height: 18px; /* Hauteur de ligne pour une meilleure lisibilité */
-    width: 100%; /* Garde la largeur alignée avec le titre */
+    margin: 0; /* Supprime les marges par défaut */
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.44px;
+    text-align: left;
+    width: 226px;
+    height: auto; /* Supprime la hauteur fixe */
+    margin-bottom: 24px; /* Espacement de 24px sous le paragraphe */
 }
+.star {
+    width: 72.9px;
+    height: 11.93px;
+    display: flex;
+    gap: 0px;
+    margin: 0 13.5px;
+    position: relative;
+    padding: 0px;
+    margin-top: 35px;
+    }
+    .popular ul li .star .fas {
+        display: flex;
+        flex-direction: row;
+        font-size: 14px; /* Taille des étoiles */
+        color: #0065FC; /* Couleur des étoiles remplies */
+        
+    }
+    .popular ul li .star i:last-child {
+        display: flex;
+        flex-direction: row;
+        font-size: 14px; /* Taille des étoiles */
+        color: #F2F2F2; /* Couleur des étoiles remplies */
+    }
 
-
-
-
-
-
+    .starss {
+        width: 72.9px;
+        height: 11.93px;
+        display: flex;
+        gap: 0px;
+        margin: 0 13.5px;
+        position: relative;
+        padding: 0px;
+        margin-top: 18px;
+        }
+        .popular ul li .starss .fas {
+            display: flex;
+            flex-direction: row;
+            font-size: 14px; /* Taille des étoiles */
+            color: #0065FC; /* Couleur des étoiles remplies */
+            
+        }
+        .popular ul li .starss i:last-child {
+            display: flex;
+            flex-direction: row;
+            font-size: 14px; /* Taille des étoiles */
+            color: #F2F2F2; /* Couleur des étoiles remplies */
+        }
 /* *** SECTION ACTIVITÉS À MARSEILLE *** */
 .activities-section {
-    width: 1440px; /* Largeur totale */
-    margin: 50px auto; /* Centre la section horizontalement */
+    width: 1340px; /* Largeur totale */
     display: flex;
     flex-direction: column; /* Aligne le titre et les cartes en colonne */
     gap: 30px; /* Espacement entre le titre et les cartes */
 }
 
 .activities-section h2 {
-    font-size: 22px /* Taille du titre */
-    font-weight : bold; /* Poids du texte pour qu'il soit plus épais */
+    font-size: 22px; /* Taille du titre */
+    font-weight: bold; /* Poids du texte pour qu'il soit plus épais */
     text-align: left; /* Aligne le texte à gauche */
     margin: 0; /* Supprime les marges par défaut */
-    margin-top: 20px; /* Ajoute un petit espacement en haut */
+    margin-top: 50px; /* Ajoute un petit espacement en haut */
     padding-left: 30px; /* Ajoute un espace à gauche pour le démarquer */
 }
 
 /* Conteneur des cartes */
 .activities {
     display: flex; /* Affiche les cartes sur une seule ligne */
-    justify-content: space-between; /* Répartit les cartes avec un espacement égal */
     gap: 30px; /* Espacement entre les cartes */
 }
 
@@ -514,7 +590,6 @@ button {
 
 /* Image dans la carte */
 .activity-card img {
-    width: 297.5px; /* Largeur fixe de l'image */
     height: 380px; /* Hauteur fixe de l'image */
     object-fit: cover; /* Adapte l'image sans déformation */
     border-top-left-radius: 20px; /* Coins arrondis en haut à gauche */
@@ -541,49 +616,117 @@ button {
 /* *** Footer Global *** */
 .footer {
     width: 1340px; /* Largeur totale */
-    height: auto; /* Hauteur ajustable */
-    background-color: #F2F2F2; /* Fond gris clair */
-    margin: 0 auto; /* Centre le footer */
-    padding: 20px 0; /* Espacement interne en haut et en bas */
-    display: flex; /* Dispose les sections en ligne */
-    justify-content: space-between; /* Espacement uniforme entre les sections */
-    gap: 0px; /* Pas d'écart supplémentaire entre les sections */
-}
+     height: auto; /* Hauteur ajustable */
+     background-color: #F2F2F2; /* Fond gris clair */
+     margin: 100px auto 0 auto; 
+     padding: 20px 0; /* Espacement interne en haut et en bas */
+     display: flex; /* Dispose les sections en ligne */
+     justify-content: space-between; /* Espacement uniforme entre les sections */
+     gap: 0px; /* Pas d'écart supplémentaire entre les sections */
+ }
 
-/* *** Section individuelle dans le footer *** */
 .footer-section {
-    width: 446.67px; /* Largeur des colonnes */
-    padding: 20px 20px 0 20px; /* Ajoute du padding à gauche et à droite */
-    gap: 15px; /* Espacement entre les éléments internes */
+    max-width: 446.67px;
+    padding: 20px 20px 0 20px;
+    gap: 15px;
 }
 
 /* *** Titres des sections *** */
 .footer-section h3 {
     font-family: 'Raleway', sans-serif;
-    font-size: 18px; /* Taille de la police */
-    font-weight: 700; /* Texte en gras */
-    line-height: 21.13px; /* Hauteur de ligne */
-    text-align: left; /* Aligne le texte à gauche */
-    margin-bottom: 15px; /* Espacement avec le contenu en dessous */
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.13px;
+    text-align: left;
+    margin-bottom: 15px;
 }
 
 /* *** Liens de chaque section *** */
 .footer-section ul {
-    list-style: none; /* Supprime les puces des listes */
-    padding: 0; /* Supprime les marges internes */
-    margin: 0; /* Supprime les marges externes */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-section ul li {
-    margin-bottom: 15px; /* Espacement entre chaque lien */
+    margin-bottom: 15px;
 }
 
 .footer-section ul li a {
     font-family: 'Raleway', sans-serif;
-    font-size: 16px; /* Taille de la police */
-    font-weight: 400; /* Texte normal */
-    line-height: 18.78px; /* Hauteur de ligne */
-    text-align: left; /* Aligne le texte à gauche */
-    text-decoration: none; /* Supprime le soulignement */
-    color: #000; /* Texte noir */
- }
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.78px;
+    text-align: left;
+    text-decoration: none;
+    color: #000;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    header nav ul{
+        margin-right: 110px;
+    }    
+    .filters{
+        margin-top: 50px;
+    }    
+    .filter-label{
+        position: absolute;
+        margin-bottom: 90px;
+    }
+    .filter{
+      padding: 8px 20px;  
+    }
+    .main-container{
+        flex-direction: column;
+    }
+    .accommodations{
+        width: 924px;
+        height: 611.5px;
+    }
+    .accommodations h2{
+        margin-left: 30px;
+        margin-top: 1px;
+    }
+    .cards{
+        gap: 30px 70px;
+        margin-left: -30px;
+        display: grid;
+    }
+    .card{
+        width: 268px;
+        height: 207.25px;
+    }
+    .card img{
+        width: 268px;
+        height: 124px;
+        margin-left: 2px;
+    }
+    
+    .popular{
+        width: 924px;
+        height: 252px;
+    }
+    .popular h2{
+        margin-top: 0%;
+    }
+    .popular ul{
+        flex-direction: row;
+        margin-left: 20px;
+        width: 870px;
+    }
+    .popular ul li h3{
+        word-wrap: break-word;
+    }
+    .activities{
+        gap: 30px;
+        margin-left: 30px;
+    }
+    .activity-card{   
+        width: 193px;
+        height: 270px;     
+    }
+    .footer{
+        width: 924px;
+        height: 163px; 
+    }
+}
