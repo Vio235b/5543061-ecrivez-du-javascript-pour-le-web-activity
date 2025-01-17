@@ -1,3 +1,28 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Sections principales */
+header, .main-container, footer {
+    margin: 0;
+    padding: 0;
+}
 /* Reset de base */
 body {
     margin: 0;
@@ -21,13 +46,14 @@ header {
 
 header .logo img {
     width: 120px;
+    margin:30px;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     gap: 65px;
-    margin: -15px;
+    margin: 3px 30px;
 }
 
 header nav ul li a {
@@ -67,7 +93,7 @@ header nav ul li a:hover::before {
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  margin: 0; /* Suppression de marge par défaut */
+  margin: 30px; /* Suppression de marge par défaut */
   margin-bottom: 8px; /* Distance de 8px entre le h2 et le paragraphe */
 }
 
@@ -80,7 +106,7 @@ header nav ul li a:hover::before {
   padding: 0 20px;
   border-radius: 25px 0 0 25px;
   outline: none;
-  margin: 0; /* Suppression des marges par défaut */
+  margin-left: 15px;
   margin-bottom: 24px; /* Distance de 24px entre le paragraphe et le bouton */
 }
 
@@ -94,6 +120,7 @@ header nav ul li a:hover::before {
     overflow: hidden;
     background-color: white;
     gap: 10px;
+    margin: 30px;
 }
 
 .icon-container {
@@ -115,7 +142,9 @@ header nav ul li a:hover::before {
 
 .location-input input {
     border-left: 1px solid #F2F2F2;
-    border-right: 0;
+    border-right: 1px;
+    border-top: 1px;
+    border-bottom: 1px;
     border-radius: 10px; /* Coins arrondis */
     padding: 10px; /* Espacement interne */
     font-family: Raleway, sans-serif; /* Police Raleway */
@@ -148,6 +177,15 @@ header nav ul li a:hover::before {
     margin: 0;
 } 
 
+.search-button i{
+    display: none;
+}
+
+.filter-btn{
+    display: flex; 
+    gap: 20px;
+}
+
 /* *** Filtres *** */
 .filters {
     display: flex; /* Permet un alignement flexible des éléments */
@@ -156,7 +194,7 @@ header nav ul li a:hover::before {
     width: 758px; /* Largeur ajustée selon votre description */
     height: 50px; /* Hauteur fixe */
     opacity: 1; /* Assure que le conteneur est visible */
-    margin-bottom: 10px;
+    margin-left: 30px;
     margin-top: 20px;
     margin-bottom: 15px;
 }
@@ -227,9 +265,9 @@ header nav ul li a:hover::before {
     line-height: 18.78px; /* Hauteur de ligne */
     color: black; /* Texte noir */
     text-align: left; /* Alignement du texte à gauche */
-    width: 1306px; /* Largeur du conteneur de texte */
     height: 19px; /* Hauteur du conteneur */
     opacity: 1; /* Rendre visible */
+    margin: 30px;
 }
 
 .info i {
@@ -251,7 +289,7 @@ header nav ul li a:hover::before {
 .main-container {
     display: flex; /* Affiche les sections côte à côte */
     gap: 40px; /* Espacement entre les deux sections */
-    margin-top:40Px;
+    margin: 30px;
 }
 
 
@@ -385,8 +423,6 @@ button {
     margin-top: 20px; 
 }
 
-
-
 /* Styles pour la section Populaire */
 .popular {
     width: 429px; /* Largeur fixe */
@@ -417,7 +453,7 @@ button {
     position: absolute;
     right: 30px; /* Distance par rapport au bord droit */
     display: inline-block; /* Assure une bonne mise en page */
-    margin-top: -40px;
+    margin-top: -25px;
 }
 
 /* Conteneur des cartes */
@@ -447,11 +483,12 @@ button {
 .popular ul li .card-content {
     display: flex;
     flex-direction: column; /* Organise verticalement */
-    justify-content: flex-start; /* Aligne le contenu en haut */
+    justify-content: space-between;
     gap: 8px; /* Réduit l'espacement vertical entre titre, texte et étoiles */
     padding: 10px 10px 0 10px; /* Réduit l'espacement autour du texte */
     box-sizing: border-box;
     width: 226px; /* Largeur précise */
+    padding: 5px;
 }
 
 /* Image de la carte */
@@ -511,10 +548,9 @@ button {
     height: 11.93px;
     display: flex;
     gap: 0px;
-    margin: 0 13.5px;
     position: relative;
     padding: 0px;
-    margin-top: 35px;
+    margin: 5px;
     }
     .popular ul li .star .fas {
         display: flex;
@@ -574,6 +610,7 @@ button {
 .activities {
     display: flex; /* Affiche les cartes sur une seule ligne */
     gap: 30px; /* Espacement entre les cartes */
+    margin: 0 30px;
 }
 
 /* Style des cartes */
@@ -662,20 +699,35 @@ button {
     color: #000;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+    header .logo img{
+        width: 61px;
+    }
+
     header nav ul{
-        margin-right: 110px;
-    }    
+        margin-right: 50px;
+    } 
     .filters{
-        margin-top: 50px;
+        margin-bottom: 50px;
+        flex-direction: column;
+        align-items: start;
     }    
+
     .filter-label{
-        position: absolute;
-        margin-bottom: 90px;
+        position: relative;
+    }
+    .filter-btn{
+        display: flex;
+        gap: 15px;
     }
     .filter{
       padding: 8px 20px;  
     }
+    .info{
+        margin-top: 30px;
+    }
+
     .main-container{
         flex-direction: column;
     }
@@ -705,6 +757,7 @@ button {
     .popular{
         width: 924px;
         height: 252px;
+        margin-left: 0;
     }
     .popular h2{
         margin-top: 0%;
@@ -714,19 +767,185 @@ button {
         margin-left: 20px;
         width: 870px;
     }
-    .popular ul li h3{
-        word-wrap: break-word;
+    .popular ul li h3 {
+        width: 163.11px;
+    }
+    .popular ul li img {
+        width: 91.5
     }
     .activities{
         gap: 30px;
-        margin-left: 30px;
     }
     .activity-card{   
         width: 193px;
         height: 270px;     
     }
+    .activity-card img{
+        height: 210px;
+    }
+    .activity-card .card-text{
+        font-size: 12px;
+    }
     .footer{
-        width: 924px;
+        width: 965px;
         height: 163px; 
     }
+}
+
+
+@media screen and (max-width: 375px){        
+    header .logo img{
+        width: 61.09px;
+        margin-left: 155px;
+        margin-top: 30px;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        border-bottom: 2px solid #F2F2F2;
+      }
+    
+      header nav {
+        width: 100%;
+      }
+    
+      header nav ul {
+        gap: 135px; 
+      }
+      header nav ul li a:hover::before {
+        top: auto;
+        bottom: -5px; 
+        width: 187.5px;
+        left: 50%;
+        transform: translateX(-50%);  
+    }
+    .headline h2{
+        width: 375px;
+        margin: 30px 15px;
+    }
+    .headline p {
+        width: 375px;
+        margin-left: -3px;
+    }
+    .main-container {
+       flex-direction: column-reverse ;
+    }
+    .headline p{
+        width: 335px;
+        margin-bottom: 35px;
+    }
+    .search-bar{
+        width: 335px;
+        margin: 15px;
+        margin-bottom: 20px;
+    }
+    .search-button {
+        width: 49px;
+        height: 49px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    .search-button i {
+        display: block;
+    }
+    .search-button span{
+        display: none;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+        margin: 15px;
+      }
+     .filter{
+        width: 162px;
+        height: 40px;
+    }
+    .filter-btn{
+        display: flex;       
+        gap: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .info{
+        margin: 10px; 
+    }
+    .accommodations {
+        background: #FFF;
+        margin-left: -10px;
+    }
+    .accommodations h2 {
+        font-size: 20px;
+        margin-left: 3px;
+    }
+    .cards{
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: -277px;
+        }
+    .card {
+        width: 315px;
+        height: 207.25px;
+    }
+    .card img {
+        width: 335px;
+        height: 124px;
+    }
+    button{
+        margin-left: 15px;
+    }
+    .popular {
+        width: 390px;
+        border-radius: 0px;
+        margin-left: -40px;
+        margin-top: 35px;
+    }
+    .popular ul {
+        width: 335px;
+    }
+    .popular h2{
+        font-size: 26px;
+        line-height: 26px;
+    }
+    .popular ul li {
+        width: 335px;
+        margin-left: 35px;
+        height: 136px;
+    }
+    .popular ul li img {
+        width: 111.67px;
+        height: 135px;
+    }
+    .activities-section{
+        width: 100%;
+        padding-top: 845px;
+        margin-left: 5px;
+    }
+    .activities {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+    }
+    .activity-card {
+        width: 315px;
+        height: 200px;
+        
+    }
+    .activity-card img{
+        width: 315px;
+        height: 141px;
+    }
+    .footer {
+        flex-direction: column;
+        bottom: 0;
+        width: 100%;
+     }   
 }
