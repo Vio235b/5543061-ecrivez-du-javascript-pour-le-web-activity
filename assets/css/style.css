@@ -848,7 +848,7 @@ button {
     header nav ul li a:hover::before {
         top: auto;
         bottom: -5px;
-        width: 400px;
+        width: 350px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -920,8 +920,8 @@ button {
     }
     
     .accommodations h2 {
-        font-size: 20px;
         margin-left: 15px;
+        width: 100%;
     }
     
     .cards {
@@ -960,10 +960,10 @@ button {
      }
      
      .popular h2 {
-        font-size: 30px;
         line-height: 30px;
         margin-left: 15px;
-     }
+        width: 100%;
+        }
      
      .popular ul li {
         width: 100%;
