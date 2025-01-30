@@ -78,7 +78,7 @@ header nav ul li a:hover::before {
 }
 
 /* Titre principal */
-.headline h2 {
+.headline h1 {
   width: 1340px;
   height: 26px;
   font-family: 'Raleway', sans-serif;
@@ -848,7 +848,7 @@ button {
         transform: translateX(-50%);
     }
     
-    .headline h2 {
+    .headline h1 {
         width: 100%;
         margin: 25px 15px;
     }
