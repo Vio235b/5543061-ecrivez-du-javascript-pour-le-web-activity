@@ -23,6 +23,7 @@ header, .main-container, footer {
     margin: 0;
     padding: 0;
 }
+
 /* Reset de base */
 body {
     margin: 0;
@@ -36,12 +37,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    border-bottom: none; /* Suppression de la ligne d'ombrage */
+    border-bottom: none;
 }
 
 header .logo img {
     width: 120px;
-    margin:30px;
+    margin: 30px;
 }
 
 header nav ul {
@@ -60,7 +61,7 @@ header nav ul li a {
     padding-top: 2px;
     position: relative;
     transition: color 0.3s ease, border-top 0.3s ease;
-    text-align: left; 
+    text-align: left;
 }
 
 header nav ul li a:hover {
@@ -73,38 +74,80 @@ header nav ul li a:hover::before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 2px; /* Ligne bleue au-dessus des mots */
+    height: 2px;
     background-color: #0065FC;
 }
 
 /* Titre principal */
 .headline h1 {
-  width: 1340px;
-  height: 26px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 25.83px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  margin: 30px; /* Suppression de marge par défaut */
-  margin-bottom: 8px; /* Distance de 8px entre le h2 et le paragraphe */
+    width: 1340px;
+    height: 26px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25.83px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin: 30px;
+    margin-bottom: 8px;
 }
 
 /* Paragraphe sous le titre */
 .headline p {
-  width: 1340px;
-  height: 19px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  padding: 0 20px;
-  border-radius: 25px 0 0 25px;
-  outline: none;
-  margin-left: 15px;
-  margin-bottom: 24px; /* Distance de 24px entre le paragraphe et le bouton */
+    width: 1340px;
+    height: 19px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    padding: 0 20px;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    margin-left: 15px;
+    margin-bottom: 24px;
 }
 
+/* Styles communs */
+/* Images */
+img {
+    object-fit: cover;
+    border-style: solid;
+    border-color: #FFFFFF;
+}
+
+/* Cartes */
+.card, .popular ul li, .activity-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Textes des cartes */
+.card h3, .popular ul li h3, .activity-card .card-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-align: left;
+}
+
+/* Étoiles */
+.stars, .star, .starss {
+    width: 72.9px;
+    height: 11.93px;
+    display: flex;
+    gap: 0px;
+    position: relative;
+    padding: 0px;
+}
+
+.stars .fas, .popular ul li .star .fas, .popular ul li .starss .fas {
+    color: #0065FC;
+}
+
+.stars i:last-child, .popular ul li .star i:last-child, .popular ul li .starss i:last-child {
+    color: #F2F2F2;
+}
+
+/* Barre de recherche */
 .search-bar {
     display: flex;
     width: 377px;
@@ -119,11 +162,11 @@ header nav ul li a:hover::before {
 }
 
 .icon-container {
-    background-color: #F2F2F2; /* Couleur de fond gris */
+    background-color: #F2F2F2;
     display: flex;
     align-items: center;
-    padding: 0 10px; /* Espacement autour de l'icône */
-    border-radius: 15px 0 0 15px; /* Coins arrondis pour le côté gauche */
+    padding: 0 10px;
+    border-radius: 15px 0 0 15px;
     height: 49px;
     margin-left: -10px;
 }
@@ -140,19 +183,21 @@ header nav ul li a:hover::before {
     border-right: 1px;
     border-top: 1px;
     border-bottom: 1px;
-    border-radius: 10px; /* Coins arrondis */
-    padding: 10px; /* Espacement interne */
-    font-family: Raleway, sans-serif; /* Police Raleway */
-    font-size: 18px; /* Taille du texte */
-    font-weight: 700; /* Texte en gras */
-    line-height: 21.13px; 
-    text-align: center; 
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.13px;
+    text-align: center;
     text-underline-position: from-font;
-    text-decoration-skip-ink: none; 
-    background-color: white; /* Fond blanc */
-    color: #000; /* Couleur noire pour le texte */
-    outline: none; 
+    text-decoration-skip-ink: none;
+    background-color: white;
+    color: #000;
+    outline: none;
+    width: 100%;
 }
+
 .location-input i {
     margin-right: 10px;
     color: #000;
@@ -170,61 +215,57 @@ header nav ul li a:hover::before {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin: 0;
-} 
+}
 
-.search-button i{
+.search-button i {
     display: none;
 }
 
-.filter-btn{
-    display: flex; 
+/* Filtres */
+.filter-btn {
+    display: flex;
     gap: 20px;
 }
 
-/* *** Filtres *** */
 .filters {
-    display: flex; /* Permet un alignement flexible des éléments */
-    align-items: center; /* Aligne verticalement les éléments au centre */
-    gap: 15px; /* Espacement entre les éléments */
-    width: 758px; /* Largeur ajustée selon votre description */
-    height: 50px; /* Hauteur fixe */
-    opacity: 1; /* Assure que le conteneur est visible */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 758px;
+    height: 50px;
+    opacity: 1;
     margin-left: 30px;
     margin-top: 20px;
     margin-bottom: 15px;
 }
 
-/* Style du texte "Filtres" */
 .filter-label {
-    font-family: Raleway, sans-serif; /* Police définie */
-    font-size: 18px; /* Taille de police */
-    font-weight: 700; /* Poids du texte en gras */
-    line-height: 21.13px; /* Hauteur de ligne */
-    text-align: center; /* Centrage horizontal du texte */
-    text-underline-position: from-font; /* Position de soulignement respectant la police */
-    text-decoration-skip-ink: none; /* Soulignement sans interruption pour l'encre */
-    color: #000; /* Couleur noire */
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.13px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000;
 }
 
-/* Style des boutons de filtre */
 .filter {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px; /* Espace entre l'icône et le texte */
-    padding: 8px 24px; /* Espacement interne augmenté pour des boutons plus grands */
-    border: 2px solid #D9D9D9; /* Bordure légèrement plus épaisse */
-    border-radius: 30px; /* Arrondi personnalisé légèrement augmenté */
-    background-color: #FFF; /* Fond blanc */
+    gap: 12px;
+    padding: 8px 24px;
+    border: 2px solid #D9D9D9;
+    border-radius: 30px;
+    background-color: #FFF;
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
-    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    white-space: nowrap;
     font-size: 16px;
     font-weight: 700;
 }
 
-
-/* Texte des boutons */
 .filter span {
     font-family: Raleway, sans-serif;
     font-size: 17px;
@@ -233,73 +274,68 @@ header nav ul li a:hover::before {
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: #000; /* Couleur noire par défaut */
+    color: #000;
 }
 
-/* Icônes des boutons */
 .filter i {
-    color: #0065FC; /* Couleur bleue des icônes */
-    font-size: 16px; /* Taille des icônes */
+    color: #0065FC;
+    font-size: 16px;
 }
 
-/* État au survol */
 .filter:hover {
-    background-color: #DEEBFF; /* Fond bleu clair au survol */
-    border-color: #B0B0B0; /* Bordure grise */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Accentuation de l'ombre */
+    background-color: #DEEBFF;
+    border-color: #B0B0B0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Informations supplémentaires */
+/* Info */
 .info {
     display: flex;
     align-items: center;
-    gap: 5px; /* Distance de 5px entre l'icône et le texte */
+    gap: 5px;
     font-family: 'Raleway', sans-serif;
-    font-size: 16px; /* Taille de la police */
-    font-weight: 400; /* Épaisseur normale */
-    line-height: 18.78px; /* Hauteur de ligne */
-    color: black; /* Texte noir */
-    text-align: left; /* Alignement du texte à gauche */
-    height: 19px; /* Hauteur du conteneur */
-    opacity: 1; /* Rendre visible */
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.78px;
+    color: black;
+    text-align: left;
+    height: 19px;
+    opacity: 1;
     margin: 30px;
 }
 
 .info i {
-    background-color: white; /* Fond blanc */
-    color: #0065FC; /* Texte bleu dans l'icône */
-    border: 1px solid #D9D9D9; /* Contour gris clair */
-    border-radius: 50%; /* Cercle parfait */
-    width: 24px; /* Largeur de l'icône */
-    height: 24px; /* Hauteur de l'icône */
-    display: flex; /* Flexbox pour centrer le contenu */
-    align-items: center; /* Centre verticalement */
-    justify-content: center; /* Centre horizontalement */
-    font-size: 14px; /* Taille du texte "i" */
-    margin-right: 5px; /* Force une distance de 5px */
+    background-color: white;
+    color: #0065FC;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-right: 5px;
 }
 
-
-/* *** CONTAINER PRINCIPAL *** */
+/* Container principal */
 .main-container {
-    display: flex; /* Affiche les sections côte à côte */
-    gap: 40px; /* Espacement entre les deux sections */
+    display: flex;
+    gap: 40px;
     margin: 30px;
 }
 
-
-/* Styles pour la section Hébergements */
+/* Section Hébergements */
 .accommodations {
-    width: 871px; /* Largeur inchangée */
-    height: 580px; 
-    padding: 30px 0 0 0; /* Espacement en haut uniquement */
-    gap: 30px; /* Espacement inchangé entre les éléments */
-    border-radius: 15px ; /* Arrondi uniquement sur le coin supérieur gauche */
-    background: #F2F2F2; /* Couleur gris clair */
+    width: 65%;
+    height: 580px;
+    padding: 30px 0 0 0;
+    gap: 30px;
+    border-radius: 15px;
+    background: #F2F2F2;
     opacity: 1;
 }
 
-/* Titre "Hébergements à Marseille" */
 .accommodations h2 {
     width: 811px;
     height: 26px;
@@ -309,126 +345,74 @@ header nav ul li a:hover::before {
     font-weight: 700;
     line-height: 25.83px;
     text-align: left;
-    margin-left: 60px; /* Décale le titre de 40px vers la droite */
+    margin-left: 60px;
 }
 
-
-
-/* Conteneur des cartes */
 .cards {
-    width: 100%; /* Largeur maximale pour s'adapter au conteneur parent */
-    display: grid; /* Utilise une grille pour l'organisation */
-    grid-template-columns: repeat(3, 220px); /* 3 colonnes légèrement plus petites */
-    padding: 0 0 15px 0; /* Espacement uniquement en bas */
-    border-radius: 20px 0 0 0; /* Arrondi uniquement sur le coin supérieur gauche */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 220px);
+    padding: 0 0 15px 0;
+    border-radius: 20px 0 0 0;
     align-items: center;
-    justify-content: center; /* Centre les cartes horizontalement */
-    opacity: 1; 
-    gap: 50px; /* Réduction de l'espacement entre les cartes */
-    margin: 0 auto; /* Centrage du conteneur si nécessaire */
-    margin-top: 35px;
+    justify-content: center;
+    opacity: 1;
+    gap: 50px;
+    margin: 35px auto 0;
 }
 
-
-/* Styles pour chaque carte */
+/* Styles spécifiques des cartes */
 .card {
-    background: #FFFFFF;
-    border-radius: 20px; /* Bordures arrondies */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile */
-    overflow: hidden; /* Empêche les débordements des images */
     display: flex;
     flex-direction: column;
-    gap: 3px; /* Espacement entre les cartes */
-    height: 180px; /* Hauteur légèrement réduite */
+    gap: 3px;
+    height: 180px;
 }
 
-
-/* Image de la carte */
 .card img {
-    width: 225px; 
-    height: 112px; 
+    width: 225px;
+    height: 112px;
     padding-right: 2%;
-    object-fit: cover;
-    border-radius: 20px 20px 0 0 ; 
-    border: 5px solid #FFFFFF; /* Réduction de la bordure */
-    box-sizing: border-box;
-    opacity: 1;
+    border-radius: 20px 20px 0 0;
+    border-width: 5px;
 }
 
-/* Titre de l'hébergement dans la carte */
 .card h3 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 14.4px; 
-    font-weight: 700;
-    line-height: 16.9px; /* Proportionnel au changement de taille */
-    text-align: left;
-    margin: 0 13.5px 7px; /* Marges ajustées */
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+    font-size: 14.4px;
+    line-height: 16.9px;
+    margin: 0 13.5px 7px;
 }
 
-/* Texte sous le titre */
 .card p {
     font-family: 'Raleway', sans-serif;
-    font-size: 12.6px; 
+    font-size: 12.6px;
     font-weight: 400;
-    line-height: 14.8px; /* Ajustement proportionnel */
+    line-height: 14.8px;
     text-align: left;
     margin: 0 13.5px 7px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
 }
 
-/* Conteneur des étoiles */
 .stars {
-    width: 72.9px; /* Réduction de 10% */
-    height: 11.93px; /* Ajustement proportionnel */
-    display: flex;
-    gap: 0px;
     margin: 0 13.5px;
-    position: relative;
-    transform: translateY(-3.6px); /* Ajusté pour correspondre à la nouvelle taille */
-    padding: 0px;
+    transform: translateY(-3.6px);
 }
 
-/* Couleur des étoiles remplies */
 .stars .fas {
-    color: #0065FC;
-    font-size: 12.86px; /* Réduction de 10% */
+    font-size: 12.86px;
 }
 
-/* Couleur et remplissage des étoiles vides */
-.stars i:last-child {
-    font-size: 12.86px; /* Taille réduite */
-    color: #F2F2F2;
-}
-
-/* Styles pour le bouton "Afficher plus" */
-button {
-    font-family: 'Raleway', sans-serif;
-    font-size: 16.2px;
-    font-weight: 700;
-    line-height: 19px;
-    text-align: left;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0; /* Supprime les espaces internes */
-    margin-left: 54px; /* Alignement horizontal */
-}
-
-/* Styles pour la section Populaire */
+/* Section Populaire */
 .popular {
-    width: 429px; /* Largeur fixe */
-    height: 580px; /* Hauteur fixe */
-    padding: 30px 0 0 0; /* Espacement en haut uniquement */
-    gap: 0px; /* Pas d'espacement */
-    border-radius: 20px; /* Coins arrondis */
-    background: #F2F2F2; 
-    opacity: 1; /* Opacité pleine */
-    position: relative; 
+    width: 33%;
+    height: 580px;
+    padding: 30px 0 0 0;
+    gap: 0px;
+    border-radius: 20px;
+    background: #F2F2F2;
+    opacity: 1;
+    position: relative;
 }
-/* Titre "Les plus populaires" */
+
 .popular h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 22px;
@@ -438,223 +422,155 @@ button {
     margin-left: 26px;
 }
 
-/* Icône augmentation */
 .popular-header i {
-    color: #0065FC; /* Couleur de l'icône */
-    font-size: 16px; /* Taille de l'icône */
+    color: #0065FC;
+    font-size: 16px;
     width: 18px;
     height: 15.75px;
     position: absolute;
-    right: 30px; /* Distance par rapport au bord droit */
-    display: inline-block; /* Assure une bonne mise en page */
+    right: 30px;
     margin-top: -25px;
 }
 
-/* Conteneur des cartes */
 .popular ul {
-    display: flex; /* Active le mode flexbox */
-    flex-direction: column; /* Place les cartes en colonne */
-    gap: 30px; /* Espacement entre chaque carte */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     padding: 0;
-    list-style: none; 
+    list-style: none;
     align-items: center;
-    margin: 20px 0; /* Espacement vertical des cartes */
+    margin: 20px 0;
 }
 
-/* Styles pour chaque carte */
 .popular ul li {
-    display: flex;
     width: 369px;
-    gap: 0; 
-    border-radius: 20px;
-    background: #FFFFFF;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    box-sizing: border-box;
-}
-
-/* Conteneur du texte et des étoiles */
-.popular ul li .card-content {
     display: flex;
-    flex-direction: column; /* Organise verticalement */
-    justify-content: space-between;
-    gap: 8px; /* Réduit l'espacement vertical entre titre, texte et étoiles */
-    padding: 10px 10px 0 10px; /* Réduit l'espacement autour du texte */
-    box-sizing: border-box;
-    width: 226px; /* Largeur précise */
-    padding: 5px;
 }
 
-/* Image de la carte */
 .popular ul li img {
-    width: 123px; /* Largeur exacte */
-    height: 146px; /* Hauteur exacte */
-    border-radius: 20px 0px 0px 20px; /* Coins arrondis uniquement à gauche */
-    border-width: 5px 0px 5px 5px; /* Bordure spécifique */
-    border-style: solid; /* Style de la bordure */
-    border-color: #FFFFFF; /* Couleur de la bordure blanche */
-    object-fit: cover; /* L'image remplit le conteneur sans déformation */
-    display: block; /* Supprime tout espace autour de l'image */
-    box-sizing: border-box; /* Inclut la bordure dans les dimensions */
-
-    /* Bordure */
-    border-width: 5px 0px 5px 5px; /* Haut, droite, bas, gauche */
-    border-style: solid; /* Style de bordure solide */
-    border-color: #FFFFFF; /* Couleur de la bordure */
-}
-
-/* Forcer la dernière image à avoir les mêmes dimensions */
-.popular ul li img:last-child {
-    width: 246px;
+    width: 123px;
     height: 146px;
     border-radius: 20px 0px 0px 20px;
-    object-fit: cover;
+    border-width: 5px 0px 5px 5px;
 }
 
-/* Titre de la carte */
-.popular ul li h3 {
-    margin: 0; /* Supprime les marges par défaut */
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18.78px;
-    text-align: left;
+.popular ul li img:last-child {
+    width: 246px;
+}
+
+.popular ul li .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 5px;
     width: 226px;
-    height: auto; /* Supprime la hauteur fixe */
-    word-wrap: break-word;
-    margin-bottom: 5px; /* Espacement de 5px sous le titre */
 }
 
-/* Texte sous le titre */
+.popular ul li h3 {
+    font-size: 16px;
+    line-height: 18.78px;
+    width: 226px;
+    margin: 0 0 5px 0;
+}
+
 .popular ul li p {
-    margin: 0; /* Supprime les marges par défaut */
+    margin: 0;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 16.44px;
     text-align: left;
     width: 226px;
-    height: auto; /* Supprime la hauteur fixe */
-    margin-bottom: 24px; /* Espacement de 24px sous le paragraphe */
+    height: auto;
+    margin-bottom: 24px;
 }
-.star {
-    width: 72.9px;
-    height: 11.93px;
-    display: flex;
-    gap: 0px;
-    position: relative;
-    padding: 0px;
-    margin: 5px;
-    }
-    .popular ul li .star .fas {
-        display: flex;
-        flex-direction: row;
-        font-size: 14px; /* Taille des étoiles */
-        color: #0065FC; /* Couleur des étoiles remplies */
-        
-    }
-    .popular ul li .star i:last-child {
-        display: flex;
-        flex-direction: row;
-        font-size: 14px; /* Taille des étoiles */
-        color: #F2F2F2; /* Couleur des étoiles remplies */
-    }
 
-    .starss {
-        width: 72.9px;
-        height: 11.93px;
-        display: flex;
-        gap: 0px;
-        margin: 0 13.5px;
-        position: relative;
-        padding: 0px;
-        margin-top: 18px;
-        }
-        .popular ul li .starss .fas {
-            display: flex;
-            flex-direction: row;
-            font-size: 14px; /* Taille des étoiles */
-            color: #0065FC; /* Couleur des étoiles remplies */
-            
-        }
-        .popular ul li .starss i:last-child {
-            display: flex;
-            flex-direction: row;
-            font-size: 14px; /* Taille des étoiles */
-            color: #F2F2F2; /* Couleur des étoiles remplies */
-        }
-/* *** SECTION ACTIVITÉS À MARSEILLE *** */
+.star {
+    margin: 5px;
+}
+
+.popular ul li .star .fas,
+.popular ul li .starss .fas,
+.popular ul li .star i:last-child,
+.popular ul li .starss i:last-child {
+    font-size: 14px;
+}
+
+.starss {
+    margin-top: 18px;
+}
+
+/* Section Activités */
 .activities-section {
-    width: 1340px; /* Largeur totale */
+    width: 1340px;
     display: flex;
-    flex-direction: column; /* Aligne le titre et les cartes en colonne */
-    gap: 30px; /* Espacement entre le titre et les cartes */
+    flex-direction: column;
+    gap: 30px;
 }
 
 .activities-section h2 {
-    font-size: 22px; /* Taille du titre */
-    font-weight: bold; /* Poids du texte pour qu'il soit plus épais */
-    text-align: left; /* Aligne le texte à gauche */
-    margin: 0; /* Supprime les marges par défaut */
-    margin-top: 50px; /* Ajoute un petit espacement en haut */
-    padding-left: 30px; /* Ajoute un espace à gauche pour le démarquer */
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    margin: 50px 0 0;
+    padding-left: 30px;
 }
 
-/* Conteneur des cartes */
 .activities {
-    display: flex; /* Affiche les cartes sur une seule ligne */
-    gap: 30px; /* Espacement entre les cartes */
+    display: flex;
+    gap: 30px;
     margin: 0 30px;
 }
 
-/* Style des cartes */
 .activity-card {
-    width: 297.5px; /* Largeur fixe */
-    height: 437px; /* Hauteur fixe */
-    border-radius: 20px; /* Coins arrondis */
-    overflow: hidden; /* Cache les débordements */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
-    background-color: #FFF; /* Fond blanc */
-    display: flex;
-    flex-direction: column; /* Aligne l'image et le texte verticalement */
+    width: 297.5px;
+    height: 437px;
 }
 
-/* Image dans la carte */
 .activity-card img {
-    height: 380px; /* Hauteur fixe de l'image */
-    object-fit: cover; /* Adapte l'image sans déformation */
-    border-top-left-radius: 20px; /* Coins arrondis en haut à gauche */
-    border-top-right-radius: 20px; /* Coins arrondis en haut à droite */
+    height: 380px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-/* Texte en dessous de l'image */
 .activity-card .card-text {
-    width: 100%; /* Prend toute la largeur */
-    height: auto; /* Ajuste la hauteur automatiquement */
-    padding: 20px 19px; /* Espacement interne */
-    background-color: #FFF; /* Fond blanc */
-    border-bottom-left-radius: 20px; /* Coins arrondis en bas à gauche */
-    border-bottom-right-radius: 20px; /* Coins arrondis en bas à droite */
+    width: 100%;
+    height: auto;
+    padding: 20px 19px;
+    background-color: #FFF;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display
+}
+/* Suite du fichier précédent... */
+
+.activity-card .card-text {
+    width: 100%;
+    height: auto;
+    padding: 20px 19px;
+    background-color: #FFF;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     display: flex;
-    align-items: center; /* Aligne le texte verticalement au centre */
-    justify-content: left; /* Aligne le texte à gauche */
-    font-size: 16px; /* Taille du texte */
+    align-items: center;
+    justify-content: left;
+    font-size: 16px;
     font-weight: bold;
-    color: #000; /* Couleur noire pour le texte */
+    color: #000;
 }
 
-
-/* *** Footer Global *** */
+/* Footer */
 .footer {
-    width: 1340px; /* Largeur totale */
-     height: auto; /* Hauteur ajustable */
-     background-color: #F2F2F2; /* Fond gris clair */
-     margin: 100px auto 0 auto; 
-     padding: 20px 0; /* Espacement interne en haut et en bas */
-     display: flex; /* Dispose les sections en ligne */
-     justify-content: space-between; /* Espacement uniforme entre les sections */
-     gap: 0px; /* Pas d'écart supplémentaire entre les sections */
- }
+    width: 1340px;
+    height: auto;
+    background-color: #F2F2F2;
+    margin: 100px auto 0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+}
 
 .footer-section {
     max-width: 446.67px;
@@ -662,7 +578,6 @@ button {
     gap: 15px;
 }
 
-/* *** Titres des sections *** */
 .footer-section h3 {
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
@@ -672,7 +587,6 @@ button {
     margin-bottom: 15px;
 }
 
-/* *** Liens de chaque section *** */
 .footer-section ul {
     list-style: none;
     padding: 0;
@@ -811,7 +725,7 @@ button {
     }
 
     .activity-card .card-text {
-        font-size: 12px;
+        font-size: 10px;
     }
     .footer{
         width: 100%;
@@ -889,11 +803,11 @@ button {
         height: auto;
         gap: 10px;
         margin: 15px;
+        padding: 20px;
     }
     
     .filter {
         width: calc(50% - 10px);
-        max-width: 162px;
         height: 40px;
     }
     
